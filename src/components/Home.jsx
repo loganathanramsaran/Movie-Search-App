@@ -46,27 +46,27 @@ function Home() {
 
   return (
     <section
-      className="min-h-[90vh] bg-cover bg-center bg-no-repeat bg-fixed"
+      className="min-h-[90vh] bg-cover bg-green-50 bg-center bg-no-repeat bg-fixed"
       style={{ backgroundImage: `url(${HeroImage})` }}
     >
       <div>
-        <h1 className="text-center text-5xl px-3 pt-10 font-bold  ">
+        <h1 className=" heading overflow-ellipsis text-center text-5xl px-3 pt-10 font-bold  ">
           Welcome To Our <span className="text-green-600">Movie Hub</span>
         </h1>
         <h3 className="text-center font-semibold mt-2">
           <span className="text-green-700">Spend Time With Us,</span> We Are
           Responsible For Your Entertainment !
         </h3>
-        <div className="search flex gap-10 h-50 justify-center items-center max-sm:flex-col">
+        <div className="search-box bg-green-300 shadow-2xl max-w-2xl mx-auto flex gap-10 mt-5 mb-5 rounded-2xl h-40 justify-center items-center max-sm:flex-col max-md:max-w-xl max-sm:max-w-xs max-sm:gap-2 max-sm:h-35">
           <input
-            className="outline-none shadow-xl font-bold rounded-xl text-center text-green-700 border-3 border-green-400 bg-white hover:bg-green-100 max-md:w-[80%] w-100 h-12 "
+            className="outline-none shadow-xl font-bold rounded-xl text-center text-green-700 border-3 border-green-400 bg-white hover:bg-green-500 hover:text-white max-md:w-[70%] w-100 h-12 max-sm:h-10 max-sm:text-sm "
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search Your Favourite Movies..."
           />
           <select
-            className="outline-none shadow-xl font-bold rounded-xl border-3 border-green-400 bg-white hover:bg-green-100 text-center cursor-pointer text-green-700 h-12 w-40 max-md:w-30 "
+            className="outline-none shadow-xl font-bold rounded-xl border-3 border-green-400 bg-green-500 hover:bg-white hover:text-green-700 text-center cursor-pointer text-white h-12 w-40 max-md:w-26 max-sm:h-8"
             value={type}
             onChange={(e) => setType(e.target.value)}
           >
@@ -78,7 +78,7 @@ function Home() {
         </div>
         <div className="text-center ">
           {loading && (
-            <p className="mx-auto animate-spin h-8 w-8 border-4 border-green-800 border-solid rounded-full border-t-transparent">
+            <p className="mx-auto animate-spin h-8 w-8 border-4 border-green-600 border-solid rounded-full border-t-transparent">
               {""}
             </p>
           )}
@@ -93,7 +93,7 @@ function Home() {
           <div className="flex justify-center flex-wrap gap-10 pb-10">
             {movies.map((movie) => (
               <div key={movie.imdbID}>
-                <div className="flex flex-col w-50 h-75 justify-between p-2 shadow-xl rounded-xl hover:bg-green-300 scale-90 hover:scale-95">
+                <div className="flex flex-col w-50 h-75 justify-between p-2 shadow-xl rounded-xl bg-white hover:bg-green-300 scale-90 hover:scale-95">
                   <img
                     className="h-40 w-full rounded-xl"
                     src={movie.Poster}
