@@ -59,7 +59,7 @@ function Home() {
         </h3>
         <div className="search-box bg-green-300 shadow-2xl max-w-2xl mx-auto flex gap-10 mt-5 mb-5 rounded-2xl h-40 justify-center items-center max-sm:flex-col max-md:max-w-xl max-sm:max-w-xs max-sm:gap-2 max-sm:h-35">
           <input
-            className="outline-none shadow-xl font-bold rounded-xl text-center text-green-700 border-3 border-green-400 bg-white hover:bg-green-500 hover:text-white max-md:w-[70%] w-100 h-12 max-sm:h-10 max-sm:text-sm "
+            className="outline-none shadow-xl font-bold rounded-xl text-center text-green-700 border-3 border-green-400 bg-white hover:bg-gray-100 hover:text-green-700 max-md:w-[70%] w-100 h-12 max-sm:h-10 max-sm:text-sm "
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
